@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reaction Diffusion Experiment</title>
+    <script>
+      if (history.scrollRestoration) {
+        // history.scrollRestoration = 'manual';
+        // window.scrollTo(0, 100);
+      }
+    </script>
+    <script src="./dependencies/offscreen-polyfill.js"></script>
+    <script src="./dependencies/howler.min.js"></script>
+    <script src="./dependencies/gpu-browser.min.js"></script>
+    <script src="./dependencies/fps.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <img id="init__seed" src="./maps/rd/seed.svg" alt="" />
+    <img id="env__seed" src="./maps/env/seed.svg" alt="" />
+    <img id="env__mask" src="./maps/env/mask3.svg" alt="" />
+    <div id="bgfill"></div>
+    <canvas id="canvas"></canvas>
+    <div id="filter"></div>
+    <button id="stop" data-stopstart="0">Stop</button>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
